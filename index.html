@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/app.css" rel="stylesheet">
+        <title>Guitar Neck Builder</title>
+    </head>
+       
+    <body>
+        <div class="container">
+            <main role="main" class="pb-3">
+                <h1>Tab Builder</h1>
+                <div id="tabControlsContainer">
+                    <form id="noteSelectionContainer">
+                        <fieldset id="noteModeInput" class="tabControlOptionsFieldSet">
+                            <h3>Note Mode:</h3>
+                            <input type="radio" id="singleNoteRadio" name="noteType" value="single" checked>
+                            <label for="single">Single Notes</label>
+                            <br>
+                            <input type="radio" id="chordRadio" name="noteType" value="chord">
+                            <label for="chord">Chord</label>                    
+                        </fieldset>
+                        <div class="drawBtnContainer">
+                            <input class="actionButton" type="button" id="drawTabBtn" value="Draw Chord" disabled=true>
+                        </div>         
+                    </form>
+                    <form id="tabSymbolsSelector">
+                        <fieldset id="connectNotesInput" class="tabControlOptionsFieldSet">
+                            <h3>Tab Symbols:</h3>
+                            <input type="radio" id="slideRadio" name="noteType" value="slide">
+                            <label for="slide">Slide</label>
+                            <br>
+                            <input type="radio" id="bendRadio" name="noteType" value="bend">
+                            <label for="bend">Bend</label>
+                            <br>
+                            <input type="radio" id="hammerOnRadio" name="noteType" value="hammeron">
+                            <label for="hammeron">Hammer On</label>
+                            <br>
+                            <input type="radio" id="pullOffRadio" name="noteType" value="pulloff">
+                            <label for="pulloff">Pull Off</label>                    
+                        </fieldset>
+                        <div class="drawBtnContainer">
+                            <input class="actionButton" type="button" id="drawSymbolBtn" value="Draw Symbol">
+                        </div> 
+                    </form>
+                </div>
+                <div id="tabBuilderContainer">
+                    <canvas id="tabBuilderCanvas"
+                            class="tabuilderCanvas"
+                            width="1300"
+                            height="1300"
+                            style="border:1px solid #000000;">
+                    </canvas>
+                    <canvas id="notesCanvas"
+                            class="tabuilderCanvas"
+                            width="1300"
+                            height="1300"
+                            style="border:1px solid #000000;">
+                    </canvas>
+                </div>
+                <input class="actionButton" type="button" id="loadTabBtn" value="Load">
+                <input class="actionButton" type="button" id="deleteTabBtn" value="Delete">
+                <input class="actionButton" type="button" id="insertTabBtn" value="Insert">
+                <input class="actionButton" type="button" id="addTabLineBtn" value="Add New Tab Line">
+                <h1>Scale Finder App</h1>
+                <canvas id="guitarNeckCanvas"
+                        width="1300"
+                        height="300"
+                        style="border:1px solid #000000;">
+                </canvas>
+                <h2>Choose Key</h2>
+                <label for="keySelector">Select key: </label>
+                <select name="keySelector" id="keySelector">
+                    <option value="A">A</option>
+                    <option value="A#">A#</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="C#">C#</option>
+                    <option value="D">D</option>
+                    <option value="D#">D#</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="F#">F#</option>
+                    <option value="G">G</option>
+                    <option value="G#">G#</option>
+                </select>
+                <h2>Choose Scale Type</h2>
+                <label for="scaleTypeSelector">Select scale type: </label>
+                <select name="scaleTypeSelector" id="scaleTypeSelector">
+                    <option value="major">major</option>
+                    <option value="minor">minor</option>
+                    <option value="pentatonic">minor pentatonic</option>
+                    <option value="harmonicMinor">harmonic minor</option>
+                </select>
+                <h2>Generate Scale</h2>
+                <button type="button" id="btnGenerateScale">Generate</button>
+            </main>
+        </div>
+    </body>
+    <script src="dist/main.js"></script>
+</html>

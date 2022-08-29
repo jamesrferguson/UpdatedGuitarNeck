@@ -1,0 +1,45 @@
+
+#tabBuilderContainer {
+    position: relative;
+    width: 1300px;
+    height: 300px;
+    overflow: auto;
+    border: 1px solid;
+}
+
+.tabuilderCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tabControlsContainer {
+    max-width: 60%;
+}
+
+.tabControlOptionsFieldSet {
+    border: none;
+}
+
+#noteSelectionContainer {
+    float: left;
+}
+
+#noteSelectionContainer, #tabSymbolsSelector {
+    margin: 1em;
+    display: inline-block;
+}
+
+.drawBtnContainer {
+    display: block;
+    max-width: 80%;
+    min-width: 60%;
+}
+
+.actionButton {
+    margin: 1em 0.25em 1em 0.25em;
+}
+
+#drawTabBtn {
+    width: 100%;
+}
